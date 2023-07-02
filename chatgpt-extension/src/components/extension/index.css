@@ -1,0 +1,31 @@
+.chatgpt-extension-icon{
+    width: 32px;
+    height: 32px;
+    margin: 0px;
+    margin-top: -12px;
+}
+.description{
+    font-family: arial,sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: left;
+    color: #5f6368;
+}
+.extension-content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+.enable-box{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.enable-text{
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    color: #5f6368;
+}

@@ -1,0 +1,42 @@
+
+{
+  "name": "chatGPT",
+  "version": "1.0",
+  "description": "ChatGPT is an artificial intelligence chatbot that uses natural language processing to create humanlike conversational dialogue developed by OpenAI",
+  "permissions": ["storage","tabs","activeTab"],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "background": {
+    "service_worker": "./static/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["./static/js/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources":["assets/chatgpt.png"],
+      "matches": ["https://*.youtube.com/*"]
+    },
+    {
+      "resources": ["index.html"],
+      "matches": ["https://*.youtube.com/*"]
+    },
+    {
+      "resources": ["contentScript.tsx"],
+      "matches": ["https://*.youtube.com/*"]
+    }
+  ],
+  "action":{
+    "default_icon":{
+      "16": "assets/chatgpt.png",
+      "24": "assets/chatgpt.png",
+      "32": "assets/chatgpt.png"
+    },
+    "default_title": "chatGPT",
+    "default_popup": "index.html"
+  },
+  "manifest_version": 3
+}
+
